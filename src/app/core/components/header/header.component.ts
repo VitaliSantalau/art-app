@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  public isLogged: boolean = false;
+  public isShowSettings: boolean = false;
 
+  public toggleSettings(): void {
+    console.log('hi');
+    this.isShowSettings = !this.isShowSettings;
+  }
 }
