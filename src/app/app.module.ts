@@ -12,8 +12,8 @@ import { DataModule } from './data/data.module';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
     DataModule,
+    CoreModule,
     AppRoutingModule,
   ],
   providers: [],
