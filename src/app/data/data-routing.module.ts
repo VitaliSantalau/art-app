@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ArtworksListComponent } from './components/artworks-list/artworks-list.component';
+import { DetailArtworkComponent } from './components/detail-artwork/detail-artwork.component';
 import { DataComponent } from './data.component';
+import { MainComponent } from './pages/main/main.component';
 
 const routes: Routes = [
   {
@@ -12,11 +13,12 @@ const routes: Routes = [
       },
       {
         path: 'artworks',
-        component: ArtworksListComponent,
+        component: MainComponent,
       },
-      // {
-      //   path: 'artworks/:id',
-      // },
+      {
+        path: 'artworks/:id',
+        component: DetailArtworkComponent,
+      },
     ],
   },
 ];

@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { IArtwork } from 'src/app/shared/models/artwork.model';
+import { IArtworksState } from '../state/artworks.state';
 
 export const loadArtworks = createAction(
   '[App Component], Load Artworks',
@@ -7,5 +7,9 @@ export const loadArtworks = createAction(
 
 export const loadArtworksSuccess = createAction(
   '[Artworks API], Artworks Loaded Success',
-  props<{ artworks: IArtwork[] }>(),
+  props<{ data: IArtworksState }>(),
+);
+
+export const loadArtworksError = createAction(
+  '[Artworks API], Artworks Loaded Error',
 );

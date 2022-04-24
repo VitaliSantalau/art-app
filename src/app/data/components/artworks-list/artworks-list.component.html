@@ -1,1 +1,7 @@
-<p>artworks-list works!</p>
+<div class="container">
+  <ul class="list">
+    <li *ngFor="let artwork of artworks$ | async">
+      <app-artwork [artwork]="artwork"></app-artwork>
+    </li>
+  </ul>
+</div>

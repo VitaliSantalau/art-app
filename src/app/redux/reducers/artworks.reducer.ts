@@ -5,9 +5,11 @@ import { initArtworksState } from '../state/artworks.state';
 export const artworksReducer = createReducer(
   initArtworksState,
   on(
-    loadArtworksSuccess, (state, { artworks }) => {
+    loadArtworksSuccess, (state, { data }) => {
+      const { pagination, artworks } = data;
       return {
         ...state,
+        pagination,
         artworks,
       };
     },

@@ -1,1 +1,12 @@
-<p>artwork works!</p>
+<div class="card">
+  <img [src]="artwork?.image_url">
+  <p class="title">
+    {{ artwork?.title }}
+  </p>
+  <p class="artist">
+    {{ artwork?.artist_title }}
+  </p>
+  <button class="more-btn" routerLink="{{ artwork?.id }}">
+    ...more
+  </button>
+</div>

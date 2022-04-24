@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SettingsComponent } from './components/settings/settings.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AppRoutingModule } from '../app-routing.module';
 
@@ -10,7 +9,6 @@ import { AppRoutingModule } from '../app-routing.module';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    SettingsComponent,
     NotFoundComponent,
   ],
   imports: [
@@ -22,4 +20,5 @@ import { AppRoutingModule } from '../app-routing.module';
     FooterComponent,
   ],
 })
+
 export class CoreModule { }
