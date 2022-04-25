@@ -8,7 +8,8 @@ import { DataComponent } from './data.component';
 import { DetailArtworkComponent } from './components/detail-artwork/detail-artwork.component';
 import { MainComponent } from './pages/main/main.component';
 import { SettingsComponent } from './components/settings/settings.component';
-
+import { FilterPipe } from './pipes/filter/filter.pipe';
+import { SortPipe } from './pipes/sort/sort.pipe';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     DetailArtworkComponent,
     MainComponent,
     SettingsComponent,
+    FilterPipe,
+    SortPipe,
   ],
   imports: [
     CommonModule,

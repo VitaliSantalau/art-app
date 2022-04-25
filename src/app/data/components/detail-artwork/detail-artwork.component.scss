@@ -25,11 +25,13 @@
   img {
     width: 100%;
     max-width: 40rem;
+    height: auto;
   }
 
   .content {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
 
     .title {
       font-size: 3rem;
@@ -37,6 +39,13 @@
 
     .artist {
       align-self: flex-end;
+    }
+
+    .history {
+      -webkit-line-clamp: 10;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
   }
 

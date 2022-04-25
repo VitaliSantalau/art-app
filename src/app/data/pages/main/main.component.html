@@ -1,2 +1,8 @@
-<app-settings></app-settings>
-<app-artworks-list></app-artworks-list>
+<app-settings
+  (sendFilterValue)="setFilterWord($event)"
+  (sendSortDirection)="setSortDirection($event)"
+></app-settings>
+<app-artworks-list
+  [filterValue]="filterValue"
+  [direction]="direction"
+></app-artworks-list>
