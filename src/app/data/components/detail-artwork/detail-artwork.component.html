@@ -1,0 +1,26 @@
+<div class="container">
+  <button class="back-btn" (click)="goBack()"></button>
+  <img [src]="artwork?.image_url" >
+  <div class="content">
+    <p class="title">
+      {{ artwork?.title }}
+    </p>
+    <p class="style">
+      {{ artwork?.style_title }}
+    </p>
+    <p class="date">
+      {{ artwork?.date_display }}
+    </p>
+    <p class="artist">
+      {{ artwork?.artist_display }}
+    </p>
+    <p class="history">
+      {{ artwork?.publication_history }}
+    </p>
+    <div class="controls">
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
+    </div>
+  </div>
+</div>
+

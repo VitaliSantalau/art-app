@@ -1,0 +1,11 @@
+<header class="header">
+  <div class="container">
+    <div class="logo">Art gallery</div>
+    <div class="auth-controls">
+      <p *ngIf="isLogged">user name</p>
+      <button>
+        {{isLogged ? 'LogOut' : 'LogIn'}}
+      </button>
+    </div>
+  </div>
+</header>

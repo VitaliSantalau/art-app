@@ -1,0 +1,43 @@
+@import '../../../shared/styles/variables.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30rem;
+  height: 45rem;
+
+  img {
+    width: 100%;
+    max-width: 30rem;
+    height: 30rem;
+  }
+
+  .title,
+  .artist {
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .artist {
+    font-size: 1.8rem;
+  }
+
+  .more-btn {
+    margin-top: auto;
+    cursor: pointer;
+  }
+}
+
+.card:hover {
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}

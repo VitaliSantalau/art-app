@@ -1,0 +1,14 @@
+<div class="container">
+  <ul class="list">
+    <li 
+      *ngFor="
+        let artwork of artworks$
+        | async
+        | filter: filterValue
+        | sort: direction
+      "
+    >
+      <app-artwork [artwork]="artwork"></app-artwork>
+    </li>
+  </ul>
+</div>
