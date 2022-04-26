@@ -1,10 +1,13 @@
 @import '../../../shared/styles/variables.scss';
 
+.settings {
+  background-color: $color-sh;
+}
+
 .container {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  background-color: $color-sh;
 }
 
 .btn-arrow-wrapper {
