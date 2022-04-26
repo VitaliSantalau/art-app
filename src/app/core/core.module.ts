@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     AppRoutingModule,
+    MaterialModule,
   ],
   exports: [
     HeaderComponent,

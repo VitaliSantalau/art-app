@@ -11,6 +11,7 @@ import { DataModule } from './data/data.module';
 import { ArtworksEffects } from './redux/effects/artworks.effects';
 import { reducers } from './redux/reducers/reducers';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([ArtworksEffects]),
     BrowserAnimationsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

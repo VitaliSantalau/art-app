@@ -10,9 +10,10 @@ import { MainComponent } from './pages/main/main.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { SortPipe } from './pipes/sort/sort.pipe';
-import { UserArtworksComponent } from './components/user-artworks/user-artworks.component';
 import { UserComponent } from './pages/user/user.component';
-
+import { MaterialModule } from '../material/material.module';
+import { ArtworksListCDKComponent } from './components/artworks-list-cdk/artworks-list-cdk.component';
+import { ArtworksListMaterialComponent } from './components/artworks-list-material/artworks-list-material.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +25,14 @@ import { UserComponent } from './pages/user/user.component';
     SettingsComponent,
     FilterPipe,
     SortPipe,
-    UserArtworksComponent,
     UserComponent,
+    ArtworksListCDKComponent,
+    ArtworksListMaterialComponent,
   ],
   imports: [
     CommonModule,
     DataRoutingModule,
+    MaterialModule,
   ],
 })
 export class DataModule { }

@@ -3,4 +3,15 @@
     <button class="create-btn">create artwork</button>
   </div>
 </div>
-<app-user-artworks></app-user-artworks>
+<div class="container">
+  <mat-tab-group mat-align-tabs="end">
+    <mat-tab label="Angular CDK">
+      <app-artworks-list-cdk></app-artworks-list-cdk>
+    </mat-tab>
+    <mat-tab label="Angular Material">
+      <app-artworks-list-material></app-artworks-list-material>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+
