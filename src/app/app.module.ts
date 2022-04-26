@@ -10,6 +10,7 @@ import { CoreModule } from './core/core.module';
 import { DataModule } from './data/data.module';
 import { ArtworksEffects } from './redux/effects/artworks.effects';
 import { reducers } from './redux/reducers/reducers';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { reducers } from './redux/reducers/reducers';
     AppRoutingModule,
     StoreModule.forRoot(reducers),
     EffectsModule.forRoot([ArtworksEffects]),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

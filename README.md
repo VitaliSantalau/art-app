@@ -3,14 +3,14 @@
 **implemented:**
 - [X] create components structure
 - [X] use data 
-- [X] use Input and Output
-- [X] create at least two routes
-- [ ] lifecycle Hooks – add usage of ngDestroy, ngOnInit. At least for one component log changes in console by ngOnChanges
+- [X] use Input and Output (sort direction, filter value)
+- [X] create at least two routes (/data/artworks, /data/artworks/:id, /**, )
+- [X] lifecycle Hooks – add usage of ngDestroy, ngOnInit. At least for one component log changes in console by ngOnChanges(rewrite artworks-list)
 - pipes
-  - [ ] use at least two standard pipes
+  - [X] use at least two standard pipes (uppercase, titlecase)
   - [X] create custom pipe (sort, filter)
-- [X] services – add at least one service
-- [X] HTTP – use any public API call
+- [X] services – add at least one service (data.service)
+- [X] HTTP – use any public API call (data.service - https://api.artic.edu/api)
 - [ ] use angular forms/reactive forms for adding new items from UI
 - [ ] add at least one component on UI dynamically. For example:
     a.	Editing panel for edit and read mode

@@ -1,10 +1,10 @@
 <div class="card">
   <img [src]="artwork?.image_url">
   <p class="title">
-    {{ artwork?.title }}
+    {{ artwork?.title | titlecase }}
   </p>
   <p class="artist">
-    {{ artwork?.artist_title }}
+    {{ artwork?.artist_title | titlecase }}
   </p>
   <button class="more-btn" routerLink="{{ artwork?.id }}">
     ...more

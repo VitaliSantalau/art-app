@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  public isLogged: boolean = true;
+  public title: string = 'Art gallery';
 }

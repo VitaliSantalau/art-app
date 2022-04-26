@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailArtworkComponent } from './components/detail-artwork/detail-artwork.component';
 import { DataComponent } from './data.component';
 import { MainComponent } from './pages/main/main.component';
+import { UserComponent } from './pages/user/user.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'artworks/:id',
         component: DetailArtworkComponent,
+      },
+      {
+        path: 'user-artworks',
+        component: UserComponent,
       },
     ],
   },

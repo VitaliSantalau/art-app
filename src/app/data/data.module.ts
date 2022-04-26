@@ -10,6 +10,9 @@ import { MainComponent } from './pages/main/main.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { FilterPipe } from './pipes/filter/filter.pipe';
 import { SortPipe } from './pipes/sort/sort.pipe';
+import { UserArtworksComponent } from './components/user-artworks/user-artworks.component';
+import { UserComponent } from './pages/user/user.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { SortPipe } from './pipes/sort/sort.pipe';
     SettingsComponent,
     FilterPipe,
     SortPipe,
+    UserArtworksComponent,
+    UserComponent,
   ],
   imports: [
     CommonModule,
