@@ -14,6 +14,8 @@ import { UserComponent } from './pages/user/user.component';
 import { MaterialModule } from '../material/material.module';
 import { ArtworksListCDKComponent } from './components/artworks-list-cdk/artworks-list-cdk.component';
 import { ArtworksListMaterialComponent } from './components/artworks-list-material/artworks-list-material.component';
+import { ArtworksListScrollComponent } from './components/artworks-list-scroll/artworks-list-scroll.component';
+
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { ArtworksListMaterialComponent } from './components/artworks-list-materi
     UserComponent,
     ArtworksListCDKComponent,
     ArtworksListMaterialComponent,
+    ArtworksListScrollComponent,
   ],
   imports: [
     CommonModule,
