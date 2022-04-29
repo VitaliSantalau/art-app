@@ -1,10 +1,30 @@
-/**
- * Add basic flex styling so that the cells evenly space themselves in the row.
- */
- cdk-row, cdk-header-row, cdk-footer-row {
-    display: flex;
-  }
-  
-  cdk-cell, cdk-header-cell, cdk-footer-cell {
-    flex: 1;
-  }
+@import '../../../shared/styles/variables.scss';
+
+cdk-virtual-scroll-viewport {
+  width: 500px;
+  height: 500px;
+}
+
+cdk-table {
+  width: 100%;
+  height: 100%;
+}
+
+cdk-row, cdk-header-row, cdk-footer-row {
+  display: flex;
+}
+
+cdk-cell, cdk-header-cell, cdk-footer-cell {
+  flex: 1;
+  padding: 1rem;
+  border-bottom: 1px solid $color-sh;
+}
+
+cdk-header-cell {
+  font-weight: 700;
+}
+
+.artwork-img {
+  width: 20rem;
+  height: 20rem;
+}

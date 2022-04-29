@@ -14,9 +14,6 @@ export class ArtworksListComponent implements OnInit, OnDestroy, OnChanges {
   public artworks: IArtwork[] | null = null;
   public subscription: Subscription | undefined;
 
-  // public artworks$ = this.store.select(selectArtworks);
-  // I prefer to use async pipe
-
   @Input() filterValue: string | null = null;
   @Input() direction: 'asc' | 'desc' | null = null;
 

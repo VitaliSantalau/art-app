@@ -18,11 +18,11 @@
     c.	Show/Clear any panel by button
 - [ ] move components on ChangeDecetionStategy.OnPush and MarkForCheck
 - [ ] use at least for one component Detach/Reattach from ChangeDetectorRef
-- [ ] integrate Angular CDK
-- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table required*)
+- [X] integrate Angular CDK
+- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, )
 - [ ] integrate Angular Virtual Scroll
-- [ ] integrate Angular Material
-- [ ] use at least 5 components from https://material.angular.io/components/categories
+- [X] integrate Angular Material
+- [ ] use at least 5 components from https://material.angular.io/components/categories (tabs, )
 - [ ] integrate table with Pagination, Sorting, Filter
 
 

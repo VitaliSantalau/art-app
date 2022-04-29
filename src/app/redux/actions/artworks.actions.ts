@@ -9,7 +9,3 @@ export const loadArtworksSuccess = createAction(
   '[Artworks API], Artworks Loaded Success',
   props<{ data: IArtworksState }>(),
 );
-
-export const loadArtworksError = createAction(
-  '[Artworks API], Artworks Loaded Error',
-);
