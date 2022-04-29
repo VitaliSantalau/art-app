@@ -8,9 +8,9 @@ describe('ArtworksListCDKComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArtworksListCDKComponent ]
+      declarations: [ ArtworksListCDKComponent ],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

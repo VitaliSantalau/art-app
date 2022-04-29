@@ -23,7 +23,7 @@
 - [ ] integrate Angular Virtual Scroll
 - [X] integrate Angular Material
 - [ ] use at least 5 components from https://material.angular.io/components/categories (tabs, )
-- [ ] integrate table with Pagination, Sorting, Filter
+- [X] integrate table with Pagination, Sorting (title, artist), Filter
 
 
 
