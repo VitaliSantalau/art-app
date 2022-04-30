@@ -3,7 +3,7 @@
   <ng-container cdkColumnDef="image">
     <cdk-header-cell *cdkHeaderCellDef> Artwork </cdk-header-cell>
     <cdk-cell *cdkCellDef="let element"> 
-      <img class="artwork-img" src="{{element.image_url}}" alt="artwork image"> 
+      <img class="artwork-img" [src]="element.image_url" alt="artwork image"> 
     </cdk-cell>
   </ng-container>
 

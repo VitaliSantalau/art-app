@@ -1,23 +1,58 @@
-table {
-    width: 100%;
+@import '../../../shared/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+  margin-top: 2rem;
+  border: 1px solid $color-sh;
+}
+
+cdk-virtual-scroll-viewport {
+  height: 50vh;
+  width: 20rem;
+  margin: 2rem;
+  border: 1px solid $color-sh;
+
+  .item {
+    height: 100px;
+    margin: 1rem;
+    border: 1px solid $color-sh;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
   }
-    
-  .mat-form-field {
-    width: 30rem;
-    font-size: 1.8rem;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
   }
-  
-  .mat-cell, .mat-header-cell {
-    width: 25%;
-    padding: 2rem;
-    font-size: 1.8rem;
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-  
-  .mat-header-cell {
-    font-weight: 700;
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-bg-dark;
   }
-  
-  .artwork-img {
-    width: 20rem;
-    height: 20rem;
+
+  .item:hover {
+    border: 1px solid $color-bg-dark;
   }
+}
+
+cdk-virtual-scroll-viewport:active,
+.view-item:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.view-item {
+  width: 30rem;
+  height: 40rem;
+  border: 1px solid $color-sh;;
+}

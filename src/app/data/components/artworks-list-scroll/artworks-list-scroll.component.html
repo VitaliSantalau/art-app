@@ -1,34 +1,23 @@
-<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-    <div *cdkVirtualFor="let artwork of artworks" class="example-item">{{item}}</div>
+<div class="container">
+  
+  <div class="view-item" cdkDrag cdkDragBoundary=".container">
+  
+  </div>
+  
+  <cdk-virtual-scroll-viewport itemSize="50" cdkDrag cdkDragBoundary=".container">
+    <div 
+      *cdkVirtualFor="let artwork of artworks$" 
+      class="item"
+    >
+      <img [src]="artwork.image_url" [alt]="artwork.title">
+    </div>
   </cdk-virtual-scroll-viewport>
-  
-  
-  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
-  
-      <ng-container matColumnDef="image">
-        <th mat-header-cell *matHeaderCellDef> Artwork </th>
-        <td mat-cell *matCellDef="let element"> 
-          <img class="artwork-img" src="{{element.image_url}}" alt="artwork image">   
-        </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
-        <td mat-cell *matCellDef="let element"> {{element.title | titlecase}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="artist_title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Artist </th>
-        <td mat-cell *matCellDef="let element"> {{element.artist_title | titlecase}} </td>
-      </ng-container>
-  
-      <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef> Date display </th>
-        <td mat-cell *matCellDef="let element"> {{element.date_display}} </td>
-      </ng-container>
-    
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  
-  </table>
-    
+
+  <p *cdkPortal>
+    The content of this template is captured by the portal.
+  </p>
+
+  <ng-template [cdkPortalOutlet]="userSettingsPortal"></ng-template>
+</div>
+
+

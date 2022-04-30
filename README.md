@@ -19,8 +19,8 @@
 - [ ] move components on ChangeDecetionStategy.OnPush and MarkForCheck
 - [ ] use at least for one component Detach/Reattach from ChangeDetectorRef
 - [X] integrate Angular CDK
-- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, )
-- [ ] integrate Angular Virtual Scroll
+- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, drag&drop, portal )
+- [X] integrate Angular Virtual Scroll
 - [X] integrate Angular Material
 - [ ] use at least 5 components from https://material.angular.io/components/categories (tabs, )
 - [X] integrate table with Pagination, Sorting (title, artist), Filter

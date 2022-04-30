@@ -7,6 +7,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { DragDropModule } from '@angular/cdk/drag-drop'; 
+import { PortalModule } from '@angular/cdk/portal'; 
 
 @NgModule({
   exports: [
@@ -18,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSortModule,
     MatFormFieldModule,
     MatInputModule,
+    DragDropModule,
+    PortalModule,
   ],
 })
 export class MaterialModule { }
