@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { IAppState } from 'src/app/redux/state/app.state';
 import { MatTableDataSource } from '@angular/material/table';
@@ -22,6 +22,7 @@ export class ArtworksListMaterialComponent implements OnInit, AfterViewInit {
 
   constructor(
     private readonly store: Store<IAppState>,
+    private ref: ChangeDetectorRef,
   ) {}
 
   @ViewChild(MatSort) sort: MatSort | undefined;
@@ -29,7 +30,10 @@ export class ArtworksListMaterialComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.store.select(selectUserArtworks)
-      .subscribe((artworks) => this.dataSource.data = artworks);
+      .subscribe((artworks) => {
+        this.dataSource.data = artworks;
+        this.ref.markForCheck();
+      });
   }
 
   ngAfterViewInit(): void {

@@ -6,7 +6,7 @@ import { selectUserArtworks } from 'src/app/redux/selectors/userArtworks.selecto
 import { IAppState } from 'src/app/redux/state/app.state';
 import { IUserArtwork } from 'src/app/shared/models/userArtwork.model';
 
-export class TableDataSource extends DataSource<IUserArtwork> {
+class TableDataSource extends DataSource<IUserArtwork> {
   public data = this.store.select(selectUserArtworks);
 
   constructor(private readonly store: Store<IAppState>) {
@@ -20,7 +20,6 @@ export class TableDataSource extends DataSource<IUserArtwork> {
   public disconnect(): void {}
 }
 
-
 @Component({
   selector: 'app-artworks-list-cdk',
   templateUrl: './artworks-list-cdk.component.html',
@@ -29,7 +28,8 @@ export class TableDataSource extends DataSource<IUserArtwork> {
 })
 
 export class ArtworksListCDKComponent implements OnInit {
-  public dataSource!: TableDataSource;
+  public dataSource: TableDataSource | undefined;
+  
   public displayedColumns: string[] = [
     'image', 'title', 'artist', 'date',
   ];
@@ -44,7 +44,7 @@ export class ArtworksListCDKComponent implements OnInit {
     this.ref.detach();
   }
 
-  public show(): void {
+  public reattach(): void {
     this.ref.reattach();
   }
 }

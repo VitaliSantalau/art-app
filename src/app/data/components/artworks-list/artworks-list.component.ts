@@ -50,5 +50,4 @@ export class ArtworksListComponent implements OnInit, OnDestroy, OnChanges {
       this.subscription.unsubscribe();
     }
   }
-
 }

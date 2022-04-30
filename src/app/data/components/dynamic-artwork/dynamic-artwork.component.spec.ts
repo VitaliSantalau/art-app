@@ -8,9 +8,9 @@ describe('DynamicArtworkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DynamicArtworkComponent ]
+      declarations: [ DynamicArtworkComponent ],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

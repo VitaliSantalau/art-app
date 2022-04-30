@@ -1,6 +1,7 @@
-<button  mat-raised-button color="primary" (click)="show()">show table</button>
 
-<cdk-table [dataSource]="dataSource">
+<button mat-raised-button color="primary" (click)="reattach()">reattach table</button>
+
+<cdk-table *ngIf="dataSource" [dataSource]= "dataSource">
 
   <ng-container cdkColumnDef="image">
     <cdk-header-cell *cdkHeaderCellDef> Artwork </cdk-header-cell>
@@ -28,4 +29,3 @@
   <cdk-row *cdkRowDef="let row; columns: displayedColumns;" cdkVirtualFor></cdk-row>
 
 </cdk-table>
-  

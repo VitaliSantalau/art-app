@@ -15,9 +15,12 @@ import { DynamicArtworkComponent } from '../dynamic-artwork/dynamic-artwork.comp
 
 export class ArtworksListScrollComponent implements OnInit { 
   public artworks$ = this.store.select(selectUserArtworks);
+  
   private componentRef: ComponentRef<DynamicArtworkComponent> | undefined;
 
-  @ViewChild('artworkHost', { read: ViewContainerRef }) artworkHost: ViewContainerRef | undefined;
+  @ViewChild(
+    'artworkHost', { read: ViewContainerRef },
+  ) artworkHost: ViewContainerRef | undefined;
  
   constructor(
     private readonly store: Store<IAppState>,
@@ -28,7 +31,7 @@ export class ArtworksListScrollComponent implements OnInit {
     this.ref.detach();
   }
 
-  public show(): void {
+  public reattach(): void {
     this.ref.reattach();
   }
 
@@ -44,6 +47,5 @@ export class ArtworksListScrollComponent implements OnInit {
 
   public clear(): void {
     this.artworkHost?.clear();
-  }
- 
+  } 
 }
