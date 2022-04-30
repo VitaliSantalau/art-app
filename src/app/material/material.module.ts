@@ -8,9 +8,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { DragDropModule } from '@angular/cdk/drag-drop'; 
-import { PortalModule } from '@angular/cdk/portal'; 
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   exports: [
@@ -23,9 +25,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     MatInputModule,
     DragDropModule,
-    PortalModule,
     MatButtonModule,
     MatDialogModule,
+    MatSnackBarModule,
+    MatCardModule,
   ],
 })
 export class MaterialModule { }

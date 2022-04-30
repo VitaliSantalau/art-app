@@ -1,12 +1,14 @@
-<div class="card">
-  <img [src]="artwork?.image_url">
-  <p class="title">
-    {{ artwork?.title | titlecase }}
-  </p>
-  <p class="artist">
-    {{ artwork?.artist_title | titlecase }}
-  </p>
-  <button class="more-btn" routerLink="{{ artwork?.id }}">
-    ...more
-  </button>
-</div>
+<mat-card class="card">
+  <img mat-card-image [src]="artwork?.image_url">
+  <mat-card-content>
+    <p class="title">
+      {{ artwork?.title | titlecase }}
+    </p>
+    <p class="artist">
+      {{ artwork?.artist_title | titlecase }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button routerLink="{{ artwork?.id }}">...more</button>
+  </mat-card-actions>
+</mat-card>

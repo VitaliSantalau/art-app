@@ -9,7 +9,7 @@ export const userArtworksReducer = createReducer(
     addUserArtwork, (state, { data }) => {
       return {
         ...state,
-        artworks: [...state.artworks, data],
+        artworks: [data, ...state.artworks],
       };
     },
   ),

@@ -11,15 +11,15 @@
   - [X] create custom pipe (sort, filter)
 - [X] services – add at least one service (data.service)
 - [X] HTTP – use any public API call (data.service - https://api.artic.edu/api)
-- [ ] use angular forms/reactive forms for adding new items from UI
+- [X] use angular forms/reactive forms for adding new items from UI
 - [X] add at least one component on UI dynamically (show/clear artwork' panel by click)
 - [ ] move components on ChangeDecetionStategy.OnPush and MarkForCheck
 - [ ] use at least for one component Detach/Reattach from ChangeDetectorRef
 - [X] integrate Angular CDK
-- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, drag&drop, button,   )
+- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, drag&drop, cdkFocusInitial, scrolling)
 - [X] integrate Angular Virtual Scroll
 - [X] integrate Angular Material
-- [ ] use at least 5 components from https://material.angular.io/components/categories (tabs, )
+- [X] use at least 5 components from https://material.angular.io/components/categories (tabs, button, dialog, field, snackBar )
 - [X] integrate table with Pagination, Sorting (title, artist), Filter
 
 

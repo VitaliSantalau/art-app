@@ -1,0 +1,31 @@
+<h2 mat-dialog-title>Create Artwork</h2>
+<div mat-dialog-content>
+  <form class="form" [formGroup]="createForm" (ngSubmit)="submit()">
+    <mat-form-field>
+      <mat-label>Image</mat-label>
+      <input matInput formControlName="image" required="">
+      <mat-hint>Hint: https://www.artic.edu/iiif/2/4a076002-dffe-54e9-5256-0691c3a65c3b/full/200,/0/default.jpg</mat-hint>
+      <mat-error>You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title">
+      <mat-error>You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Artist</mat-label>
+      <input matInput formControlName="artist">
+      <mat-error>You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Date</mat-label>
+      <input matInput formControlName="date">
+      <mat-hint>Hint: 1920</mat-hint>
+      <mat-error>You must enter a value</mat-error>
+    </mat-form-field>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button mat-dialog-close>Cancel</button>
+      <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial type="submit" [disabled]="!createForm.valid">Create</button>
+    </mat-dialog-actions>
+  </form>
+</div>
