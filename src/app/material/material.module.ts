@@ -9,6 +9,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { DragDropModule } from '@angular/cdk/drag-drop'; 
 import { PortalModule } from '@angular/cdk/portal'; 
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   exports: [
@@ -22,6 +24,8 @@ import { PortalModule } from '@angular/cdk/portal';
     MatInputModule,
     DragDropModule,
     PortalModule,
+    MatButtonModule,
+    MatDialogModule,
   ],
 })
 export class MaterialModule { }

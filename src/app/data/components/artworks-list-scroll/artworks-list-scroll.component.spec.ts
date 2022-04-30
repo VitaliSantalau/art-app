@@ -8,9 +8,9 @@ describe('ArtworksListScrollComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ArtworksListScrollComponent ]
+      declarations: [ ArtworksListScrollComponent ],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

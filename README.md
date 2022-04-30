@@ -12,14 +12,11 @@
 - [X] services – add at least one service (data.service)
 - [X] HTTP – use any public API call (data.service - https://api.artic.edu/api)
 - [ ] use angular forms/reactive forms for adding new items from UI
-- [ ] add at least one component on UI dynamically. For example:
-    a.	Editing panel for edit and read mode
-    b.	Login/registration panel
-    c.	Show/Clear any panel by button
+- [X] add at least one component on UI dynamically (show/clear artwork' panel by click)
 - [ ] move components on ChangeDecetionStategy.OnPush and MarkForCheck
 - [ ] use at least for one component Detach/Reattach from ChangeDetectorRef
 - [X] integrate Angular CDK
-- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, drag&drop, portal )
+- [ ] use at least 5 components from https://material.angular.io/cdk/categories (table, drag&drop, button,   )
 - [X] integrate Angular Virtual Scroll
 - [X] integrate Angular Material
 - [ ] use at least 5 components from https://material.angular.io/components/categories (tabs, )
