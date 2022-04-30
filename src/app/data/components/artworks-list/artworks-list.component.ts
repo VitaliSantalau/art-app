@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription } from 'rxjs';
 import { selectArtworks } from 'src/app/redux/selectors/artworks.selectors';
@@ -9,7 +9,9 @@ import { IArtwork } from 'src/app/shared/models/artwork.model';
   selector: 'app-artworks-list',
   templateUrl: './artworks-list.component.html',
   styleUrls: ['./artworks-list.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class ArtworksListComponent implements OnInit, OnDestroy, OnChanges {
   public artworks: IArtwork[] | null = null;
   public subscription: Subscription | undefined;
@@ -19,11 +21,15 @@ export class ArtworksListComponent implements OnInit, OnDestroy, OnChanges {
 
   constructor(
     private readonly store: Store<IAppState>,
+    private ref: ChangeDetectorRef,
   ) { }
  
   ngOnInit(): void {
     this.subscription = this.store.select(selectArtworks)
-      .subscribe((artworks) => this.artworks = artworks);
+      .subscribe((artworks) => {
+        this.artworks = artworks;
+        this.ref.markForCheck();
+      });
   }
 
   ngOnChanges(changes: SimpleChanges): void {

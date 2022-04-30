@@ -24,8 +24,8 @@
       <mat-error>You must enter a value</mat-error>
     </mat-form-field>
     <mat-dialog-actions align="end">
-      <button mat-raised-button mat-dialog-close>Cancel</button>
-      <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial type="submit" [disabled]="!createForm.valid">Create</button>
+      <button mat-raised-button mat-dialog-close cdkFocusInitial>Cancel</button>
+      <button mat-raised-button [mat-dialog-close]="true" type="submit" [disabled]="!createForm.valid">Create</button>
     </mat-dialog-actions>
   </form>
 </div>

@@ -1,5 +1,9 @@
 @import '../../../shared/styles/variables.scss';
 
+.mat-raised-button {
+  margin: 3rem;
+}
+
 cdk-table {
   width: 100%;
   height: 100%;

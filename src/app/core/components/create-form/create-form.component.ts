@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Store } from '@ngrx/store';
@@ -10,7 +10,9 @@ import getRandomNumber from 'src/app/shared/utils/getRandomNumber';
   selector: 'app-create-form',
   templateUrl: './create-form.component.html',
   styleUrls: ['./create-form.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class CreateFormComponent {
   public createForm: FormGroup = this.fb.group({
     image: ['', Validators.required],

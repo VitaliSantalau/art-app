@@ -5,6 +5,8 @@
   </div>
   
   <div class="scroll-container" cdkDrag cdkDragBoundary=".container">
+    <button  mat-raised-button color="primary" (click)="show()">show list</button>
+
     <cdk-virtual-scroll-viewport itemSize="50" >
       <div 
         *cdkVirtualFor="let artwork of artworks$" 

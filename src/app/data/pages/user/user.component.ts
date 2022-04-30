@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { CreateFormComponent } from 'src/app/core/components/create-form/create-form.component';
 
@@ -6,10 +6,13 @@ import { CreateFormComponent } from 'src/app/core/components/create-form/create-
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UserComponent { 
 
-  constructor(public form: MatDialog) {}
+export class UserComponent { 
+  constructor(
+    public form: MatDialog,
+  ) {}
 
   public openForm(): void {
     this.form.open(CreateFormComponent);

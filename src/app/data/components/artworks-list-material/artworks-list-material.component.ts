@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { IAppState } from 'src/app/redux/state/app.state';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,7 +11,9 @@ import { MatPaginator } from '@angular/material/paginator';
   selector: 'app-artworks-list-material',
   templateUrl: './artworks-list-material.component.html',
   styleUrls: ['./artworks-list-material.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class ArtworksListMaterialComponent implements OnInit, AfterViewInit { 
   public dataSource = new MatTableDataSource<IUserArtwork>();
   public displayedColumns: string[] = [

@@ -1,5 +1,5 @@
 import { DataSource } from '@angular/cdk/collections';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { selectUserArtworks } from 'src/app/redux/selectors/userArtworks.selectors';
@@ -25,7 +25,9 @@ export class TableDataSource extends DataSource<IUserArtwork> {
   selector: 'app-artworks-list-cdk',
   templateUrl: './artworks-list-cdk.component.html',
   styleUrls: ['./artworks-list-cdk.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
+
 export class ArtworksListCDKComponent implements OnInit {
   public dataSource!: TableDataSource;
   public displayedColumns: string[] = [
@@ -34,9 +36,15 @@ export class ArtworksListCDKComponent implements OnInit {
 
   constructor(
     private readonly store: Store<IAppState>,
+    private ref: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {
     this.dataSource = new TableDataSource(this.store);
+    this.ref.detach();
+  }
+
+  public show(): void {
+    this.ref.reattach();
   }
 }

@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { selectArtworks } from 'src/app/redux/selectors/artworks.selectors';
@@ -10,6 +10,7 @@ import { IArtwork } from 'src/app/shared/models/artwork.model';
   selector: 'app-detail-artwork',
   templateUrl: './detail-artwork.component.html',
   styleUrls: ['./detail-artwork.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class DetailArtworkComponent implements OnInit {
