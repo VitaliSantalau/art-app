@@ -1,0 +1,85 @@
+@import '../../../shared/styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75vh;
+  margin-top: 2rem;
+  border: 1px solid $color-sh;
+}
+
+.scroll-container {
+  position: relative;
+  padding-top: 2rem;
+  border: 1px solid $color-sh;
+} 
+
+cdk-virtual-scroll-viewport {
+  height: 50vh;
+  width: 20rem;
+  margin: 3rem;
+  
+  .item {
+    height: 100px;
+    margin: 1rem;
+    border: 1px solid $color-sh;
+    cursor: pointer;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-bg-dark;
+  }
+
+  .item:hover {
+    border: 1px solid $color-bg-dark;
+  }
+}
+
+.scroll-container:active,
+.view-item:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.view-item {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  height: 45rem;
+  border: 1px solid $color-sh;
+
+  .clear-btn {
+    margin-top: auto;
+  }
+}
+
+.handle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: $color-bg-dark;
+  cursor: move;
+  width: 3rem;
+  height: 3rem;
+}
+
+.mat-raised-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}

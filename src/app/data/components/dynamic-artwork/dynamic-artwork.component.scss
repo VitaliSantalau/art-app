@@ -1,0 +1,30 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  height: 40rem;
+}
+
+img {
+  width: 40rem;
+  height: 25rem;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+
+  .title {
+    // font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .artist {
+    align-self: flex-end;
+  }
+}

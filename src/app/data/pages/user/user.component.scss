@@ -1,0 +1,19 @@
+@import '../../../shared/styles/variables.scss';
+
+.header {
+  background-color: $color-sh;
+  padding: 1rem 0;
+
+  .container {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .create-btn {
+    height: 3rem;
+  }
+}
+
+.container {
+  margin: 0 auto;
+}

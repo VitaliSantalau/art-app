@@ -1,0 +1,31 @@
+
+<button mat-raised-button color="primary" (click)="reattach()">reattach table</button>
+
+<cdk-table *ngIf="dataSource" [dataSource]= "dataSource">
+
+  <ng-container cdkColumnDef="image">
+    <cdk-header-cell *cdkHeaderCellDef> Artwork </cdk-header-cell>
+    <cdk-cell *cdkCellDef="let element"> 
+      <img class="artwork-img" [src]="element.image_url" alt="artwork image"> 
+    </cdk-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="title">
+    <cdk-header-cell *cdkHeaderCellDef> Title </cdk-header-cell>
+    <cdk-cell *cdkCellDef="let element"> {{element.title | titlecase}} </cdk-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="artist">
+    <cdk-header-cell *cdkHeaderCellDef> Artist </cdk-header-cell>
+    <cdk-cell *cdkCellDef="let element"> {{element.artist_title | titlecase}} </cdk-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="date">
+    <cdk-header-cell *cdkHeaderCellDef> Date display </cdk-header-cell>
+    <cdk-cell *cdkCellDef="let element"> {{element.date_display}} </cdk-cell>
+  </ng-container>
+
+  <cdk-header-row *cdkHeaderRowDef="displayedColumns"></cdk-header-row>
+  <cdk-row *cdkRowDef="let row; columns: displayedColumns;" cdkVirtualFor></cdk-row>
+
+</cdk-table>
